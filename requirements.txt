@@ -1,0 +1,14 @@
+streamlit
+streamlit-pdf-viewer
+langchain==0.2.1
+langchain-community==0.2.1
+langchain-core==0.2.3
+langsmith==0.1.63
+faiss-cpu
+sentence-transformers
+rank-bm25
+pypdf
+python-dotenv
+groq
+transformers
+torch
