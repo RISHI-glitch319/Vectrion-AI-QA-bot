@@ -1,6 +1,6 @@
 streamlit
 streamlit-pdf-viewer
-langchain==0.2.1
+langsmith==0.1.65
 langchain-community==0.2.1
 langchain-core==0.2.3
 langsmith==0.1.63
