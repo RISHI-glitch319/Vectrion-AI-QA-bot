@@ -1,30 +1,11 @@
 from groq import Groq
-from dotenv import load_dotenv
-import os
+import streamlit as st
 
-# =====================================================
-# LOAD ENV VARIABLES
-# =====================================================
-
-load_dotenv()
-
-# =====================================================
-# LOAD API KEY
-# =====================================================
-
-groq_api_key = os.getenv("GROQ_API_KEY")
-
-# =====================================================
-# INITIALIZE GROQ CLIENT
-# =====================================================
+groq_api_key = st.secrets["GROQ_API_KEY"]
 
 client = Groq(
     api_key=groq_api_key
 )
-
-# =====================================================
-# GENERATE RESPONSE
-# =====================================================
 
 def generate_response(query, context, memory_text=""):
 
@@ -32,12 +13,7 @@ def generate_response(query, context, memory_text=""):
 You are Vectrion AI,
 an advanced enterprise AI document assistant.
 
-You must:
-1. Answer ONLY using document context.
-2. Cite sources naturally.
-3. Mention page numbers.
-4. Be professional and concise.
-5. If answer is unavailable, clearly say so.
+Use ONLY the provided document context.
 
 Conversation Memory:
 {memory_text}
